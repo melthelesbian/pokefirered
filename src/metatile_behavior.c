@@ -110,3 +110,87 @@ bool8 MetatileBehavior_IsProbablyStillWarpDoor(u8 metatileBehavior)
   else
     return FALSE;
 }
+
+bool8 sub_8059BF0(u8 metatileBehavior)
+{
+  u8 result = metatileBehavior - 0x6A;
+
+  if(result > 1)
+      result = FALSE;
+  else
+      result = TRUE;
+
+  return result;
+}
+
+bool8 sub_8059C0C(u8 metatileBehavior)
+{
+  u8 result = FALSE;
+
+  if(metatileBehavior == MB_6C)
+    result = TRUE;
+
+  return result;
+}
+
+bool8 sub_8059C20(u8 metatileBehavior)
+{
+  u8 result = FALSE;
+
+  if(metatileBehavior == MB_6D)
+    result = TRUE;
+
+  return result;
+}
+
+bool8 sub_8059C34(u8 metatileBehavior)
+{
+  u8 result = FALSE;
+
+  if(metatileBehavior == MB_6E)
+    result = TRUE;
+
+  return result;
+}
+
+bool8 sub_8059C48(u8 metatileBehavior)
+{
+  u8 result = FALSE;
+
+  if(metatileBehavior == MB_6F)
+    result = TRUE;
+
+  return result;
+}
+
+bool8 sub_8059C5C(u8 metatileBehavior)
+{
+  u8 result = FALSE;
+  u8 result2 = metatileBehavior - MB_6C;
+
+  if(result2 < 4)
+    result = TRUE;
+
+  return result;
+}
+
+bool8 sub_8059C78(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_61)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 sub_8059C8C(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_60)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 sub_8059CA0(u8 metatileBehavior)
+{
+  return FALSE;
+}
