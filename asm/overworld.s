@@ -2079,7 +2079,7 @@ _08055B94:
 	cmp r0, 0x1
 	beq _08055C68
 	adds r0, r5, 0
-	bl sub_8059BDC
+	bl MetatileBehavior_IsProbablyStillWarpDoor
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
