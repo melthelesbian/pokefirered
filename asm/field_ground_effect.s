@@ -224,7 +224,7 @@ GetGroundEffectFlags_LongGrassOnSpawn: @ 8067CE8
 	push {r4,lr}
 	adds r4, r1, 0
 	ldrb r0, [r0, 0x1E]
-	bl sub_8059F4C
+	bl MetatileBehavior_ReturnFalse_2
 	lsls r0, 24
 	cmp r0, 0
 	beq _08067D00
@@ -243,7 +243,7 @@ GetGroundEffectFlags_LongGrassOnBeginStep: @ 8067D08
 	push {r4,lr}
 	adds r4, r1, 0
 	ldrb r0, [r0, 0x1E]
-	bl sub_8059F4C
+	bl MetatileBehavior_ReturnFalse_2
 	lsls r0, 24
 	cmp r0, 0
 	beq _08067D20
@@ -278,7 +278,7 @@ _08067D42:
 	cmp r0, 0
 	bne _08067D5A
 	ldrb r0, [r4, 0x1F]
-	bl sub_8059F54
+	bl MetatileBehavior_ReturnFalse_4
 	lsls r0, 24
 	cmp r0, 0
 	beq _08067D62
@@ -397,12 +397,12 @@ GetGroundEffectFlags_Puddle: @ 8067E1C
 	adds r4, r0, 0
 	adds r5, r1, 0
 	ldrb r0, [r4, 0x1E]
-	bl sub_8059F20
+	bl MetatileBehavior_IsPuddle
 	lsls r0, 24
 	cmp r0, 0
 	beq _08067E44
 	ldrb r0, [r4, 0x1F]
-	bl sub_8059F20
+	bl MetatileBehavior_IsPuddle
 	lsls r0, 24
 	cmp r0, 0
 	beq _08067E44
@@ -422,7 +422,7 @@ GetGroundEffectFlags_Ripple: @ 8067E4C
 	push {r4,lr}
 	adds r4, r1, 0
 	ldrb r0, [r0, 0x1E]
-	bl sub_8059F08
+	bl MetatileBehavior_IsPondWaterOrPuddle
 	lsls r0, 24
 	cmp r0, 0
 	beq _08067E66
@@ -443,12 +443,12 @@ GetGroundEffectFlags_ShortGrass: @ 8067E6C
 	adds r4, r0, 0
 	adds r5, r1, 0
 	ldrb r0, [r4, 0x1E]
-	bl sub_805A0EC
+	bl MetatileBehavior_ReturnFalse_7
 	lsls r0, 24
 	cmp r0, 0
 	beq _08067EAA
 	ldrb r0, [r4, 0x1F]
-	bl sub_805A0EC
+	bl MetatileBehavior_ReturnFalse_7
 	lsls r0, 24
 	cmp r0, 0
 	beq _08067EAA
@@ -838,12 +838,12 @@ FieldObjectSetSpriteOamTableForLongGrass: @ 8068154
 	cmp r0, 0
 	blt _080681A8
 	ldrb r0, [r5, 0x1E]
-	bl sub_8059F4C
+	bl MetatileBehavior_ReturnFalse_2
 	lsls r0, 24
 	cmp r0, 0
 	beq _080681A8
 	ldrb r0, [r5, 0x1F]
-	bl sub_8059F4C
+	bl MetatileBehavior_ReturnFalse_2
 	lsls r0, 24
 	cmp r0, 0
 	beq _080681A8

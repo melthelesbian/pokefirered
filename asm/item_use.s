@@ -535,7 +535,7 @@ _080A13D0:
 	b _080A1406
 _080A13D4:
 	adds r0, r5, 0
-	bl sub_8059CA4
+	bl MetatileBehavior_IsSurfable
 	lsls r0, 24
 	cmp r0, 0
 	beq _080A13F4
@@ -551,7 +551,7 @@ _080A13D4:
 _080A13F4:
 	lsls r0, r6, 24
 	lsrs r0, 24
-	bl sub_8059F58
+	bl MetatileBehavior_ReturnFalse_5
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1

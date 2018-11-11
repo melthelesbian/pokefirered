@@ -481,7 +481,7 @@ _0806EB8E:
 	bl sub_8058F78
 	lsls r0, 24
 	lsrs r0, 24
-	bl sub_8059F50
+	bl MetatileBehavior_ReturnFalse_3
 	lsls r0, 24
 	cmp r0, 0
 	beq _0806EBF6

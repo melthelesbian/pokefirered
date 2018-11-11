@@ -13373,7 +13373,7 @@ sub_8063E28: @ 8063E28
 	bl sub_8064544
 _08063E5C:
 	ldrb r0, [r4, 0x1E]
-	bl sub_8059DAC
+	bl MetatileBehavior_IsIce_2
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1

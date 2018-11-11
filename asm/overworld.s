@@ -1984,7 +1984,7 @@ _08055AF4:
 	beq _08055B30
 	lsls r0, r5, 24
 	lsrs r0, 24
-	bl sub_8059CA4
+	bl MetatileBehavior_IsSurfable
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -2018,7 +2018,7 @@ sub_8055B38: @ 8055B38
 	push {lr}
 	lsls r0, 24
 	lsrs r0, 24
-	bl sub_8059CA4
+	bl MetatileBehavior_IsSurfable
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -2067,7 +2067,7 @@ _08055B94:
 	lsls r4, 24
 	lsrs r5, r4, 24
 	adds r0, r5, 0
-	bl sub_8059CA0
+	bl MetatileBehavior_ReturnFalse
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -2680,7 +2680,7 @@ sub_8055FE0: @ 8055FE0
 	bl sub_8058F78
 	lsls r0, 24
 	lsrs r0, 24
-	bl sub_8059CA4
+	bl MetatileBehavior_IsSurfable
 	lsls r0, 24
 	cmp r0, 0
 	beq _0805606A

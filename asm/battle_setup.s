@@ -771,7 +771,7 @@ sub_807FC5C: @ 807FC5C
 	b _0807FD88
 _0807FC92:
 	adds r0, r4, 0
-	bl sub_8059F4C
+	bl MetatileBehavior_ReturnFalse_2
 	lsls r0, 24
 	cmp r0, 0
 	beq _0807FCA2
@@ -823,7 +823,7 @@ _0807FD04:
 	b _0807FD88
 _0807FD08:
 	adds r0, r4, 0
-	bl sub_8059CA4
+	bl MetatileBehavior_IsSurfable
 	lsls r0, 24
 	cmp r0, 0
 	bne _0807FD70
@@ -835,7 +835,7 @@ _0807FD18:
 _0807FD1C:
 	lsls r0, r5, 24
 	lsrs r0, 24
-	bl sub_8059CA4
+	bl MetatileBehavior_IsSurfable
 	lsls r0, 24
 	cmp r0, 0
 	bne _0807FD82
@@ -849,7 +849,7 @@ _0807FD2C:
 	cmp r0, 0
 	bne _0807FD82
 	adds r0, r4, 0
-	bl sub_8059CA4
+	bl MetatileBehavior_IsSurfable
 	lsls r0, 24
 	cmp r0, 0
 	bne _0807FD70
@@ -867,7 +867,7 @@ _0807FD58:
 	cmp r0, 0
 	beq _0807FD86
 	adds r0, r4, 0
-	bl sub_8059F5C
+	bl MetatileBehavior_ReturnFalse_6
 	lsls r0, 24
 	cmp r0, 0
 	beq _0807FD74
@@ -876,7 +876,7 @@ _0807FD70:
 	b _0807FD88
 _0807FD74:
 	adds r0, r4, 0
-	bl sub_8059F58
+	bl MetatileBehavior_ReturnFalse_5
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -919,7 +919,7 @@ GetBattleTransitionTypeByMap: @ 807FD90
 _0807FDC0:
 	lsls r0, r4, 24
 	lsrs r0, 24
-	bl sub_8059CA4
+	bl MetatileBehavior_IsSurfable
 	lsls r0, 24
 	cmp r0, 0
 	bne _0807FDE8

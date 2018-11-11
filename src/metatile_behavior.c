@@ -2,7 +2,7 @@
 #include "metatile_behavior.h"
 #include "constants/metatile_behaviors.h"
 
-bool8 sub_8059AF0(u8 metatileBehavior)
+bool8 MetatileBehavior_UnusedReturnTrue(u8 metatileBehavior)
 {
   return TRUE;
 }
@@ -86,7 +86,6 @@ bool8 sub_8059B90(u8 metatileBehavior)
     return FALSE;
 }
 
-// TODO: Confirm that this is accurate
 bool8 MetatileBehavior_IsIce(u8 metatileBehavior)
 {
   if(metatileBehavior == MB_ICE)
@@ -190,14 +189,14 @@ bool8 sub_8059C8C(u8 metatileBehavior)
     return FALSE;
 }
 
-bool8 sub_8059CA0(u8 metatileBehavior)
+bool8 MetatileBehavior_ReturnFalse(u8 metatileBehavior)
 {
   return FALSE;
 }
 
 extern u8 sTileBitAttributes[];
 
-bool8 sub_8059CA4(u8 metatileBehavior)
+bool8 MetatileBehavior_IsSurfable(u8 metatileBehavior)
 {
   if(sTileBitAttributes[metatileBehavior] & 1)
     return TRUE;
@@ -207,7 +206,7 @@ bool8 sub_8059CA4(u8 metatileBehavior)
 
 bool8 sub_8059CC8(u8 metatileBehavior)
 {
-  if(metatileBehavior == MB_11)
+  if(metatileBehavior == MB_SEMI_DEEP_WATER)
     return TRUE;
   else
     return FALSE;
@@ -266,6 +265,352 @@ bool8 MetatileBehavior_IsForcedMovementTile(u8 metatileBehavior)
     || metatileBehavior == MB_ICE
     || (metatileBehavior >= MB_UNKNOWN_MOVEMENT_54 && metatileBehavior <= MB_UNKNOWN_MOVEMENT_57))
       return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_IsIce_2(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_ICE)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 sub_8059DC0(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_UNKNOWN_MOVEMENT_48)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_IsWalkNorth(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_WALK_NORTH)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_IsWalkSouth(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_WALK_SOUTH)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_IsWalkWest(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_WALK_WEST)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_IsWalkEast(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_WALK_EAST)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_IsNorthwardCurrent(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_NORTHWARD_CURRENT)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_IsSouthwardCurrent(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_SOUTHWARD_CURRENT)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_IsWestwardCurrent(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_WESTWARD_CURRENT)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_IsEastwardCurrent(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_EASTWARD_CURRENT)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_IsSlideNorth(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_SLIDE_NORTH)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_IsSlideSouth(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_SLIDE_SOUTH)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_IsSlideWest(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_SLIDE_WEST)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_IsSlideEast(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_SLIDE_EAST)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_IsCounter(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_COUNTER)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_IsPlayerFacingTVScreen(u8 metatileBehavior, u8 playerDirection)
+{
+  if(playerDirection != DIR_NORTH)
+    return FALSE;
+  else if(metatileBehavior == MB_TELEVISION)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_IsPC(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_PC)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_IsPondWaterOrPuddle(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_POND_WATER || metatileBehavior == MB_PUDDLE)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_IsPuddle(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_PUDDLE)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 sub_8059F34(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_TALL_GRASS || metatileBehavior == MB_D1)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_ReturnFalse_2(u8 metatileBehavior)
+{
+  return FALSE;
+}
+
+bool8 MetatileBehavior_ReturnFalse_3(u8 metatileBehavior)
+{
+  return FALSE;
+}
+
+bool8 MetatileBehavior_ReturnFalse_4(u8 metatileBehavior)
+{
+  return FALSE;
+}
+
+bool8 MetatileBehavior_ReturnFalse_5(u8 metatileBehavior)
+{
+  return FALSE;
+}
+
+bool8 MetatileBehavior_ReturnFalse_6(u8 metatileBehavior)
+{
+  return FALSE;
+}
+
+bool8 sub_8059F60(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_01)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_UnusedIsTallGrass(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_TALL_GRASS)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_IsMB_0B(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_0B)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_IsMountain(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_MOUNTAIN_TOP)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 sub_8059FB0(u8 metatileBehavior)
+{
+  if(metatileBehavior >= MB_SEMI_DEEP_WATER && metatileBehavior <= MB_DEEP_WATER)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 sub_8059FCC(u8 metatileBehavior)
+{
+  if(metatileBehavior == 0x19)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 sub_8059FE0(u8 metatileBehavior)
+{
+  if(metatileBehavior == 0x17)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_IsThinIce(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_THIN_ICE)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_IsCrackedIce(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_CRACKED_ICE)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 sub_805A01C(u8 metatileBehavior)
+{
+  if((metatileBehavior >= MB_SEMI_DEEP_WATER && metatileBehavior <= MB_DEEP_WATER)
+    || metatileBehavior == MB_OCEAN_WATER)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 sub_805A03C(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_1A)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_IsSurfableAndNotWaterfall(u8 metatileBehavior)
+{
+  if(MetatileBehavior_IsSurfable(metatileBehavior)
+    && !MetatileBehavior_IsWaterfall(metatileBehavior))
+      return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_IsEastBlocked(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_IMPASSABLE_EAST
+    || metatileBehavior == MB_IMPASSABLE_NORTHEAST
+    || metatileBehavior == MB_IMPASSABLE_SOUTHEAST)
+      return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_IsWestBlocked(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_IMPASSABLE_WEST
+    || metatileBehavior == MB_IMPASSABLE_NORTHWEST
+    || metatileBehavior == MB_IMPASSABLE_SOUTHWEST)
+      return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_IsNorthBlocked(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_IMPASSABLE_NORTH
+    || metatileBehavior == MB_IMPASSABLE_NORTHEAST
+    || metatileBehavior == MB_IMPASSABLE_NORTHWEST)
+      return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_IsSouthBlocked(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_IMPASSABLE_SOUTH
+    || metatileBehavior == MB_IMPASSABLE_SOUTHEAST
+    || metatileBehavior == MB_IMPASSABLE_SOUTHWEST)
+      return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_ReturnFalse_7(u8 metatileBehavior)
+{
+  return FALSE;
+}
+
+bool8 MetatileBehavior_IsHotSprings(u8 metatileBehavior)
+{
+  if(metatileBehavior == 0x28)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_IsWaterfall(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_WATERFALL)
+    return TRUE;
   else
     return FALSE;
 }
