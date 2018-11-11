@@ -577,7 +577,7 @@ sub_80BD4B8: @ 80BD4B8
 	cmp r0, 0
 	bne _080BD4E2
 	adds r0, r4, 0
-	bl sub_805A118
+	bl MetatileBehavior_ReturnFalse_8
 	lsls r0, 24
 	cmp r0, 0
 	beq _080BD4E6

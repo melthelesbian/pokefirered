@@ -114,7 +114,7 @@ bool8 MetatileBehavior_IsSecretBaseJumpMat(u8);
 bool8 MetatileBehavior_IsSecretBaseSpinMat(u8);
 bool8 MetatileBehavior_IsLavaridgeB1FWarp(u8);
 bool8 MetatileBehavior_IsLavaridgeB1FWarp(u8);
-bool8 MetatileBehavior_IsAquaHideoutWarp(u8);
+bool8 MetatileBehavior_IsMB_67(u8);
 bool8 MetatileBehavior_IsWarpOrBridge(u8);
 bool8 MetatileBehavior_IsMossdeepGymWarp(u8);
 bool8 MetatileBehavior_IsSurfableFishableWater(u8);

@@ -2286,7 +2286,7 @@ sub_806DA10: @ 806DA10
 _0806DA68: .4byte gMapHeader
 _0806DA6C:
 	adds r0, r4, 0
-	bl sub_805A158
+	bl MetatileBehavior_ReturnFalse_11
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -2296,7 +2296,7 @@ _0806DA6C:
 	b _0806DAEE
 _0806DA82:
 	adds r0, r4, 0
-	bl MetatileBehavior_IsLavaridge1FWarp
+	bl MetatileBheavior_IsMB_68
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -2306,7 +2306,7 @@ _0806DA82:
 	b _0806DAEE
 _0806DA98:
 	adds r0, r4, 0
-	bl MetatileBehavior_IsAquaHideoutWarp
+	bl MetatileBehavior_IsMB_67
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -2316,7 +2316,7 @@ _0806DA98:
 	b _0806DAEE
 _0806DAAE:
 	adds r0, r4, 0
-	bl sub_805A184
+	bl MetatileBehavior_IsMB_71
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -2380,19 +2380,19 @@ sub_806DAF4: @ 806DAF4
 	cmp r0, 0x1
 	beq _0806DB7C
 	adds r0, r4, 0
-	bl sub_805A158
+	bl MetatileBehavior_ReturnFalse_11
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
 	beq _0806DB7C
 	adds r0, r4, 0
-	bl MetatileBehavior_IsLavaridge1FWarp
+	bl MetatileBheavior_IsMB_68
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
 	beq _0806DB7C
 	adds r0, r4, 0
-	bl MetatileBehavior_IsAquaHideoutWarp
+	bl MetatileBehavior_IsMB_67
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -2404,7 +2404,7 @@ sub_806DAF4: @ 806DAF4
 	cmp r0, 0x1
 	beq _0806DB7C
 	adds r0, r4, 0
-	bl sub_805A184
+	bl MetatileBehavior_IsMB_71
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1

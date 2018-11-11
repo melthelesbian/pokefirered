@@ -354,12 +354,12 @@ GetGroundEffectFlags_ShallowFlowingWater: @ 8067DB8
 	bne _08067DEE
 _08067DD6:
 	ldrb r0, [r4, 0x1E]
-	bl sub_805A12C
+	bl MetatileBehavior_ReturnFalse_9
 	lsls r0, 24
 	cmp r0, 0
 	beq _08067E0C
 	ldrb r0, [r4, 0x1F]
-	bl sub_805A12C
+	bl MetatileBehavior_ReturnFalse_9
 	lsls r0, 24
 	cmp r0, 0
 	beq _08067E0C

@@ -614,3 +614,118 @@ bool8 MetatileBehavior_IsWaterfall(u8 metatileBehavior)
   else
     return FALSE;
 }
+
+bool8 MetatileBehavior_ReturnFalse_8(u8 metatileBehavior)
+{
+  return FALSE;
+}
+
+bool8 MetatileBehavior_UnusedReturnFalse(u8 metatileBehavior)
+{
+  return FALSE;
+}
+
+bool8 MetatileBehavior_UnusedReturnFalse_2(u8 metatileBehavior)
+{
+  return FALSE;
+}
+
+bool8 MetatileBehavior_UnusedReturnFalse_3(u8 metatileBehavior)
+{
+  return FALSE;
+}
+
+bool8 MetatileBehavior_UnusedReturnFalse_4(u8 metatileBehavior)
+{
+  return FALSE;
+}
+
+bool8 MetatileBehavior_ReturnFalse_9(u8 metatileBehavior)
+{
+  return FALSE;
+}
+
+bool8 MetatileBehavior_ReturnFalse_10(u8 metatileBehavior)
+{
+  return FALSE;
+}
+
+bool8 sub_805A134(u8 metatileBehavior)
+{
+  if(metatileBehavior == 0x85)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_UnusedReturnFalse_5(u8 metatileBehavior)
+{
+  return FALSE;
+}
+
+bool8 MetatileBehavior_UnusedReturnFalse_6(u8 metatileBehavior)
+{
+  return FALSE;
+}
+
+bool8 MetatileBehavior_UnusedReturnFalse_7(u8 metatileBehavior)
+{
+  return FALSE;
+}
+
+bool8 MetatileBehavior_UnusedReturnFalse_8(u8 metatileBehavior)
+{
+  return FALSE;
+}
+
+bool8 MetatileBehavior_ReturnFalse_11(u8 metatileBehavior)
+{
+  return FALSE;
+}
+
+bool8 MetatileBheavior_IsMB_68(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_68)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_IsMB_67(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_67)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_IsMB_71(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_71)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 sub_805A198(u8 metatileBehavior)
+{
+  if((metatileBehavior >= MB_POND_WATER && metatileBehavior <= MB_DEEP_WATER)
+    || metatileBehavior == MB_OCEAN_WATER
+    || (metatileBehavior >= MB_EASTWARD_CURRENT && metatileBehavior <= MB_SOUTHWARD_CURRENT))
+      return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 sub_805A1C4(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_66)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_ReturnFalse_12(u8 metatileBehavior)
+{
+  return FALSE;
+}
