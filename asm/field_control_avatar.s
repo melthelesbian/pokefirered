@@ -53,7 +53,7 @@ sub_806C8BC: @ 806C8BC
 	bl cur_mapdata_block_role_at_player_pos
 	lsls r0, 24
 	lsrs r0, 24
-	bl sub_8059D70
+	bl MetatileBehavior_IsForcedMovementTile
 	lsls r0, 24
 	lsrs r7, r0, 24
 	bl ScriptContext1_IsScriptSetUp
@@ -1721,7 +1721,7 @@ sub_806D5E8: @ 806D5E8
 	bne _0806D658
 	lsls r0, r6, 24
 	lsrs r0, 24
-	bl sub_8059D70
+	bl MetatileBehavior_IsForcedMovementTile
 	lsls r0, 24
 	cmp r0, 0
 	bne _0806D658
@@ -1800,7 +1800,7 @@ sub_806D698: @ 806D698
 	bne _0806D720
 	lsls r0, r4, 24
 	lsrs r0, 24
-	bl sub_8059D70
+	bl MetatileBehavior_IsForcedMovementTile
 	lsls r0, 24
 	cmp r0, 0
 	bne _0806D720
@@ -2491,12 +2491,12 @@ _0806DBF2:
 _0806DBFC:
 	lsls r0, 24
 	lsrs r0, 24
-	bl sub_8059D04
+	bl MetatileBehavior_IsNorthArrowWarp
 	b _0806DC22
 _0806DC06:
 	lsls r0, 24
 	lsrs r0, 24
-	bl sub_8059D18
+	bl MetatileBehavior_IsSouthArrowWarp
 	b _0806DC22
 _0806DC10:
 	lsls r0, 24

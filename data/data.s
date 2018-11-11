@@ -796,7 +796,7 @@ gUnknown_8352F18:: @ 8352F18
 gUnknown_8352F4C:: @ 8352F4C
 	.asciz "VMap.Xsize * VMap.Ysize <= VIRTUAL_MAP_SIZE"
 
-gUnknown_8352F78:: @ 8352F78
+sTileBitAttributes:: @ 8352F78
 	.incbin "baserom.gba", 0x352F78, 0xF0
 
 gUnknown_8353068:: @ 8353068

@@ -194,3 +194,78 @@ bool8 sub_8059CA0(u8 metatileBehavior)
 {
   return FALSE;
 }
+
+extern u8 sTileBitAttributes[];
+
+bool8 sub_8059CA4(u8 metatileBehavior)
+{
+  if(sTileBitAttributes[metatileBehavior] & 1)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 sub_8059CC8(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_11)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_IsEastArrowWarp(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_EAST_ARROW_WARP)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_IsWestArrowWarp(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_WEST_ARROW_WARP)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_IsNorthArrowWarp(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_NORTH_ARROW_WARP)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_IsSouthArrowWarp(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_SOUTH_ARROW_WARP)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_UnusedIsArrowWarp(u8 metatileBehavior)
+{
+  u8 result = FALSE;
+
+  if(MetatileBehavior_IsEastArrowWarp(metatileBehavior)
+  || MetatileBehavior_IsWestArrowWarp(metatileBehavior)
+  || MetatileBehavior_IsNorthArrowWarp(metatileBehavior)
+  || MetatileBehavior_IsSouthArrowWarp(metatileBehavior))
+    result = TRUE;
+
+  return result;
+}
+
+bool8 MetatileBehavior_IsForcedMovementTile(u8 metatileBehavior)
+{
+  if((metatileBehavior >= MB_WALK_EAST && metatileBehavior <= MB_UNKNOWN_MOVEMENT_48)
+    ||(metatileBehavior >= MB_EASTWARD_CURRENT && metatileBehavior <= MB_SOUTHWARD_CURRENT)
+    || metatileBehavior == MB_WATERFALL
+    || metatileBehavior == MB_ICE
+    || (metatileBehavior >= MB_UNKNOWN_MOVEMENT_54 && metatileBehavior <= MB_UNKNOWN_MOVEMENT_57))
+      return TRUE;
+  else
+    return FALSE;
+}

@@ -2085,7 +2085,7 @@ _08055B94:
 	cmp r0, 0x1
 	beq _08055C68
 	adds r0, r5, 0
-	bl sub_8059D18
+	bl MetatileBehavior_IsSouthArrowWarp
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -2097,7 +2097,7 @@ _08055BD0:
 _08055BD4: .4byte 0x00000802
 _08055BD8:
 	adds r0, r5, 0
-	bl sub_8059D04
+	bl MetatileBehavior_IsNorthArrowWarp
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -6714,7 +6714,7 @@ sub_8058034: @ 8058034
 	bne _08058058
 _08058042:
 	ldrb r0, [r4, 0xC]
-	bl sub_8059D18
+	bl MetatileBehavior_IsSouthArrowWarp
 	lsls r0, 24
 	cmp r0, 0
 	beq _08058058
