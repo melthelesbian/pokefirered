@@ -359,25 +359,25 @@ sub_80A122C: @ 80A122C
 	cmp r0, 0x1
 	beq _080A129A
 	adds r0, r4, 0
-	bl sub_805A218
+	bl MetatileBehavior_ReturnFalse_16
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
 	beq _080A129A
 	adds r0, r4, 0
-	bl sub_805A21C
+	bl MetatileBehavior_ReturnFalse_17
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
 	beq _080A129A
 	adds r0, r4, 0
-	bl sub_805A210
+	bl MetatileBehavior_ReturnFalse_14
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
 	beq _080A129A
 	adds r0, r4, 0
-	bl sub_805A214
+	bl MetatileBehavior_ReturnFalse_15
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1

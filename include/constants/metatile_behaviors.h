@@ -11,7 +11,7 @@
 #define MB_SHORT_GRASS 0x07
 #define MB_CAVE 0x08
 #define MB_LONG_GRASS_SOUTH_EDGE 0x09
-#define MB_NO_RUNNING 0x0A
+#define MB_0A 0x0A
 #define MB_0B 0x0B
 #define MB_MOUNTAIN_TOP 0x0C
 #define MB_BATTLE_PYRAMID_WARP 0x0D
@@ -32,7 +32,7 @@
 #define MB_SHOAL_CAVE_ENTRANCE 0x1C
 #define MB_20 0x20
 #define MB_21 0x21
-#define MB_SEAWEED 0x22
+#define MB_22 0x22
 #define MB_ICE 0x23
 #define MB_ASHGRASS 0x24
 #define MB_25 0x25
@@ -105,11 +105,14 @@
 #define MB_7E 0x7E
 #define MB_ROUTE110_BRIDGE 0x7F
 #define MB_COUNTER 0x80
+#define MB_81 0x81
+#define MB_82 0x82
 #define MB_PC 0x83
 #define MB_CABLE_BOX_RESULTS_1 0x84
 #define MB_REGION_MAP 0x85
 #define MB_TELEVISION 0x86
-#define MB_POKEBLOCK_FEEDER 0x87
+#define MB_87 0x87
+#define MB_88 0x88
 #define MB_SLOT_MACHINE 0x89
 #define MB_ROULETTE 0x8A
 #define MB_CLOSED_SOOTOPOLIS_GYM_DOOR 0x8B
@@ -165,7 +168,7 @@
 #define MB_CE 0xCE
 #define MB_CF 0xCF
 #define MB_MUDDY_SLOPE 0xD0
-#define MB_D1 0xD1
+#define MB_BUMPY_SLOPE 0xD1
 #define MB_CRACKED_FLOOR 0xD2
 #define MB_ISOLATED_VERTICAL_RAIL 0xD3
 #define MB_ISOLATED_HORIZONTAL_RAIL 0xD4

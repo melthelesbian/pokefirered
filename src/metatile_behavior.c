@@ -43,7 +43,7 @@ bool8 sub_8059B44(u8 metatileBehavior)
 {
   if(metatileBehavior == MB_TALL_GRASS)
     return TRUE;
-  else if(metatileBehavior != MB_D1)
+  else if(metatileBehavior != MB_BUMPY_SLOPE)
     return FALSE;
   else
     return TRUE;
@@ -189,12 +189,7 @@ bool8 sub_8059C8C(u8 metatileBehavior)
     return FALSE;
 }
 
-bool8 MetatileBehavior_ReturnFalse(u8 metatileBehavior)
-{
-  return FALSE;
-}
-
-extern u8 sTileBitAttributes[];
+bool8 MetatileBehavior_ReturnFalse(u8 metatileBehavior){ return FALSE; }
 
 bool8 MetatileBehavior_IsSurfable(u8 metatileBehavior)
 {
@@ -389,11 +384,11 @@ bool8 MetatileBehavior_IsCounter(u8 metatileBehavior)
     return FALSE;
 }
 
-bool8 MetatileBehavior_IsPlayerFacingTVScreen(u8 metatileBehavior, u8 playerDirection)
+bool8 MetatileBehavior_IsPlayerFacingTVScreen(u8 tile, u8 playerDirection)
 {
   if(playerDirection != DIR_NORTH)
     return FALSE;
-  else if(metatileBehavior == MB_TELEVISION)
+  else if(tile == MB_TELEVISION)
     return TRUE;
   else
     return FALSE;
@@ -425,36 +420,17 @@ bool8 MetatileBehavior_IsPuddle(u8 metatileBehavior)
 
 bool8 sub_8059F34(u8 metatileBehavior)
 {
-  if(metatileBehavior == MB_TALL_GRASS || metatileBehavior == MB_D1)
+  if(metatileBehavior == MB_TALL_GRASS || metatileBehavior == MB_BUMPY_SLOPE)
     return TRUE;
   else
     return FALSE;
 }
 
-bool8 MetatileBehavior_ReturnFalse_2(u8 metatileBehavior)
-{
-  return FALSE;
-}
-
-bool8 MetatileBehavior_ReturnFalse_3(u8 metatileBehavior)
-{
-  return FALSE;
-}
-
-bool8 MetatileBehavior_ReturnFalse_4(u8 metatileBehavior)
-{
-  return FALSE;
-}
-
-bool8 MetatileBehavior_ReturnFalse_5(u8 metatileBehavior)
-{
-  return FALSE;
-}
-
-bool8 MetatileBehavior_ReturnFalse_6(u8 metatileBehavior)
-{
-  return FALSE;
-}
+bool8 MetatileBehavior_ReturnFalse_2(u8 metatileBehavior) { return FALSE; }
+bool8 MetatileBehavior_ReturnFalse_3(u8 metatileBehavior) { return FALSE; }
+bool8 MetatileBehavior_ReturnFalse_4(u8 metatileBehavior) { return FALSE; }
+bool8 MetatileBehavior_ReturnFalse_5(u8 metatileBehavior) { return FALSE; }
+bool8 MetatileBehavior_ReturnFalse_6(u8 metatileBehavior) { return FALSE; }
 
 bool8 sub_8059F60(u8 metatileBehavior)
 {
@@ -594,10 +570,7 @@ bool8 MetatileBehavior_IsSouthBlocked(u8 metatileBehavior)
     return FALSE;
 }
 
-bool8 MetatileBehavior_ReturnFalse_7(u8 metatileBehavior)
-{
-  return FALSE;
-}
+bool8 MetatileBehavior_ReturnFalse_7(u8 metatileBehavior) { return FALSE; }
 
 bool8 MetatileBehavior_IsHotSprings(u8 metatileBehavior)
 {
@@ -615,40 +588,13 @@ bool8 MetatileBehavior_IsWaterfall(u8 metatileBehavior)
     return FALSE;
 }
 
-bool8 MetatileBehavior_ReturnFalse_8(u8 metatileBehavior)
-{
-  return FALSE;
-}
-
-bool8 MetatileBehavior_UnusedReturnFalse(u8 metatileBehavior)
-{
-  return FALSE;
-}
-
-bool8 MetatileBehavior_UnusedReturnFalse_2(u8 metatileBehavior)
-{
-  return FALSE;
-}
-
-bool8 MetatileBehavior_UnusedReturnFalse_3(u8 metatileBehavior)
-{
-  return FALSE;
-}
-
-bool8 MetatileBehavior_UnusedReturnFalse_4(u8 metatileBehavior)
-{
-  return FALSE;
-}
-
-bool8 MetatileBehavior_ReturnFalse_9(u8 metatileBehavior)
-{
-  return FALSE;
-}
-
-bool8 MetatileBehavior_ReturnFalse_10(u8 metatileBehavior)
-{
-  return FALSE;
-}
+bool8 MetatileBehavior_ReturnFalse_8(u8 metatileBehavior) { return FALSE; }
+bool8 MetatileBehavior_UnusedReturnFalse(u8 metatileBehavior){ return FALSE; }
+bool8 MetatileBehavior_UnusedReturnFalse_2(u8 metatileBehavior) { return FALSE; }
+bool8 MetatileBehavior_UnusedReturnFalse_3(u8 metatileBehavior) { return FALSE; }
+bool8 MetatileBehavior_UnusedReturnFalse_4(u8 metatileBehavior) { return FALSE; }
+bool8 MetatileBehavior_ReturnFalse_9(u8 metatileBehavior) { return FALSE; }
+bool8 MetatileBehavior_ReturnFalse_10(u8 metatileBehavior) { return FALSE; }
 
 bool8 sub_805A134(u8 metatileBehavior)
 {
@@ -658,30 +604,11 @@ bool8 sub_805A134(u8 metatileBehavior)
     return FALSE;
 }
 
-bool8 MetatileBehavior_UnusedReturnFalse_5(u8 metatileBehavior)
-{
-  return FALSE;
-}
-
-bool8 MetatileBehavior_UnusedReturnFalse_6(u8 metatileBehavior)
-{
-  return FALSE;
-}
-
-bool8 MetatileBehavior_UnusedReturnFalse_7(u8 metatileBehavior)
-{
-  return FALSE;
-}
-
-bool8 MetatileBehavior_UnusedReturnFalse_8(u8 metatileBehavior)
-{
-  return FALSE;
-}
-
-bool8 MetatileBehavior_ReturnFalse_11(u8 metatileBehavior)
-{
-  return FALSE;
-}
+bool8 MetatileBehavior_UnusedReturnFalse_5(u8 metatileBehavior) { return FALSE; }
+bool8 MetatileBehavior_UnusedReturnFalse_6(u8 metatileBehavior) { return FALSE; }
+bool8 MetatileBehavior_UnusedReturnFalse_7(u8 metatileBehavior) { return FALSE; }
+bool8 MetatileBehavior_UnusedReturnFalse_8(u8 metatileBehavior) { return FALSE; }
+bool8 MetatileBehavior_ReturnFalse_11(u8 metatileBehavior) { return FALSE; }
 
 bool8 MetatileBheavior_IsMB_68(u8 metatileBehavior)
 {
@@ -725,7 +652,82 @@ bool8 sub_805A1C4(u8 metatileBehavior)
     return FALSE;
 }
 
-bool8 MetatileBehavior_ReturnFalse_12(u8 metatileBehavior)
+bool8 MetatileBehavior_ReturnFalse_12(u8 metatileBehavior){ return FALSE; }
+
+bool8 MetatileBehavior_IsMuddyOrBumpySlope(u8 metatileBehavior)
 {
-  return FALSE;
+  if(metatileBehavior >= MB_MUDDY_SLOPE && metatileBehavior <= MB_BUMPY_SLOPE)
+    return TRUE;
+  else
+    return FALSE;
 }
+
+bool8 MetatileBehavior_UnusedIsBumpySlope(u8 metatileBehavior)
+{
+  return metatileBehavior == MB_BUMPY_SLOPE;
+}
+
+bool8 MetatileBehavior_ReturnFalse_13(u8 metatileBehavior) { return FALSE; }
+bool8 MetatileBehavior_ReturnFalse_14(u8 metatileBehavior) { return FALSE; }
+bool8 MetatileBehavior_ReturnFalse_15(u8 metatileBehavior) { return FALSE; }
+bool8 MetatileBehavior_ReturnFalse_16(u8 metatileBehavior) { return FALSE; }
+bool8 MetatileBehavior_ReturnFalse_17(u8 metatileBehavior) { return FALSE; }
+
+bool8 MetatileBehavior_IsMB_22(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_22)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_IsMB_0A(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_0A)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_UnusedReturnFalse_9(u8 metatileBehavior) { return FALSE; }
+
+bool8 MetatileBehavior_IsMB_81(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_81)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_IsMB_82(u8 metatileBehavior)
+{
+  if(metatileBehavior == MB_82)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_IsPlayerFacingMB_87(u8 tile, u8 playerDirection)
+{
+  if(playerDirection != DIR_NORTH)
+    return FALSE;
+  else if(tile == 0x87)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_IsPlayerFacingMB_88(u8 tile, u8 playerDirection)
+{
+  if(playerDirection != DIR_NORTH)
+    return FALSE;
+  else if(tile == 0x88)
+    return TRUE;
+  else
+    return FALSE;
+}
+
+bool8 MetatileBehavior_UnusedReturnFalse_10(u8 metatileBehavior) { return FALSE; }
+bool8 MetatileBehavior_UnusedReturnFalse_11(u8 metatileBehavior) { return FALSE; }
+bool8 MetatileBehavior_UnusedReturnFalse_12(u8 metatileBehavior) { return FALSE; }
+bool8 MetatileBehavior_UnusedReturnFalse_13(u8 metatileBehavior) { return FALSE; }

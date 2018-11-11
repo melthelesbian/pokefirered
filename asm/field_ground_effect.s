@@ -528,7 +528,7 @@ GetGroundEffectFlags_Seaweed: @ 8067F0C
 	push {r4,lr}
 	adds r4, r1, 0
 	ldrb r0, [r0, 0x1E]
-	bl sub_805A220
+	bl MetatileBehavior_IsMB_22
 	lsls r0, 24
 	cmp r0, 0
 	beq _08067F26

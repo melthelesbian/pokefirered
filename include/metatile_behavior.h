@@ -42,7 +42,7 @@ bool8 MetatileBehavior_IsSlideSouth(u8);
 bool8 MetatileBehavior_IsSlideWest(u8);
 bool8 MetatileBehavior_IsSlideEast(u8);
 bool8 MetatileBehavior_IsCounter(u8);
-bool8 MetatileBehavior_IsPlayerFacingTVScreen(u8 tile, u8 playerDir);
+bool8 MetatileBehavior_IsPlayerFacingTVScreen(u8 tile, u8 playerDirection);
 bool8 MetatileBehavior_IsPC(u8);
 bool8 MetatileBehavior_IsCableBoxResults1(u8);
 bool8 MetatileBehavior_IsSecretBaseOpen(u8);
@@ -139,11 +139,12 @@ bool8 MetatileBehavior_IsTrashCan(u8);
 bool8 MetatileBehavior_IsShopShelf(u8);
 bool8 MetatileBehavior_IsBlueprint(u8);
 bool8 MetatileBehavior_IsBattlePyramidWarp(u8);
-bool8 MetatileBehavior_IsPlayerFacingWirelessBoxResults(u8 tile, u8 playerDir);
-bool8 MetatileBehavior_IsCableBoxResults2(u8 tile, u8 playerDir);
+bool8 MetatileBehavior_IsPlayerFacingWirelessBoxResults(u8 tile, u8 playerDirection);
+bool8 MetatileBehavior_IsCableBoxResults2(u8 tile, u8 playerDirection);
 bool8 MetatileBehavior_IsQuestionnaire(u8);
 bool8 MetatileBehavior_IsLongGrass_Duplicate(u8);
 bool8 MetatileBehavior_IsLongGrassSouthEdge(u8);
 bool8 MetatileBehavior_IsTrainerHillTimer(u8);
+extern u8 sTileBitAttributes[];
 
 #endif // GUARD_METATILE_BEHAVIOR
