@@ -763,7 +763,7 @@ sub_807FC5C: @ 807FC5C
 	lsls r0, r5, 24
 	lsrs r4, r0, 24
 	adds r0, r4, 0
-	bl sub_8059F34
+	bl MetatileBehavior_IsTallGrass_2
 	lsls r0, 24
 	cmp r0, 0
 	beq _0807FC92

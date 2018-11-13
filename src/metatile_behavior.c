@@ -39,34 +39,28 @@ bool8 MetatileBehavior_IsJumpSouth(u8 metatileBehavior)
     return FALSE;
 }
 
-bool8 sub_8059B44(u8 metatileBehavior)
+bool8 MetatileBehavior_IsTallGrass(u8 metatileBehavior)
 {
-  if(metatileBehavior == MB_TALL_GRASS)
+  if(metatileBehavior == MB_TALL_GRASS || metatileBehavior == MB_CYCLING_ROAD_PULL_DOWN_GRASS)
     return TRUE;
-  else if(metatileBehavior != MB_BUMPY_SLOPE)
-    return FALSE;
   else
-    return TRUE;
+    return FALSE;
 }
 
 bool8 sub_8059B5C(u8 metatileBehavior)
 {
-  if(metatileBehavior == MB_21)
+  if(metatileBehavior == MB_21 || metatileBehavior == MB_2B)
     return TRUE;
-  else if(metatileBehavior != MB_2B)
-    return FALSE;
   else
-    return TRUE;
+    return FALSE;
 }
 
 bool8 sub_8059B74(u8 metatileBehavior)
 {
-  if(metatileBehavior == MB_21)
+  if(metatileBehavior == MB_21 || metatileBehavior == MB_17)
     return TRUE;
-  else if(metatileBehavior != MB_17)
-    return FALSE;
   else
-    return TRUE;
+    return FALSE;
 }
 
 bool8 sub_8059B8C(u8 metatileBehavior)
@@ -102,7 +96,7 @@ bool8 MetatileBehavior_IsWarpDoor(u8 metatileBehavior)
     return FALSE;
 }
 
-bool8 MetatileBehavior_IsProbablyStillWarpDoor(u8 metatileBehavior)
+bool8 MetatileBehavior_IsWarpDoor_2(u8 metatileBehavior)
 {
   if(metatileBehavior == MB_WARP_DOOR)
     return TRUE;
@@ -110,70 +104,67 @@ bool8 MetatileBehavior_IsProbablyStillWarpDoor(u8 metatileBehavior)
     return FALSE;
 }
 
-bool8 sub_8059BF0(u8 metatileBehavior)
+bool8 MetatileBehavior_IsEscalator(u8 metatileBehavior)
 {
-  u8 result = metatileBehavior - 0x6A;
-
-  if(result > 1)
-      result = FALSE;
+  if(metatileBehavior >= MB_UP_ESCALATOR && metatileBehavior <= MB_DOWN_ESCALATOR)
+    return TRUE;
   else
-      result = TRUE;
-
-  return result;
+    return FALSE;
 }
 
-bool8 sub_8059C0C(u8 metatileBehavior)
+bool8 MetatileBehavior_IsUnknownWarp6C(u8 metatileBehavior)
 {
   u8 result = FALSE;
 
-  if(metatileBehavior == MB_6C)
+  if(metatileBehavior == MB_UNKNOWN_WARP_6C)
     result = TRUE;
 
   return result;
 }
 
-bool8 sub_8059C20(u8 metatileBehavior)
+bool8 MetatileBehavior_IsUnknownWarp6D(u8 metatileBehavior)
 {
   u8 result = FALSE;
 
-  if(metatileBehavior == MB_6D)
+  if(metatileBehavior == MB_UNKNOWN_WARP_6D)
     result = TRUE;
 
   return result;
 }
 
-bool8 sub_8059C34(u8 metatileBehavior)
+bool8 MetatileBehavior_IsUnknownWarp6E(u8 metatileBehavior)
 {
   u8 result = FALSE;
 
-  if(metatileBehavior == MB_6E)
+  if(metatileBehavior == MB_UNKNOWN_WARP_6E)
     result = TRUE;
 
   return result;
 }
 
-bool8 sub_8059C48(u8 metatileBehavior)
+bool8 MetatileBehavior_IsUnknownWarp6F(u8 metatileBehavior)
 {
   u8 result = FALSE;
 
-  if(metatileBehavior == MB_6F)
+  if(metatileBehavior == MB_UNKNOWN_WARP_6F)
     result = TRUE;
 
   return result;
 }
 
-bool8 sub_8059C5C(u8 metatileBehavior)
+bool8 MetatileBehavior_IsUnknownWarp6C_to_6F(u8 metatileBehavior)
 {
-  u8 result = FALSE;
-  u8 result2 = metatileBehavior - MB_6C;
+  bool8 result = FALSE;
 
-  if(result2 < 4)
+  if(metatileBehavior >= MB_UNKNOWN_WARP_6C && metatileBehavior <= MB_UNKNOWN_WARP_6F)
     result = TRUE;
+  else
+    result = FALSE;
 
   return result;
 }
 
-bool8 sub_8059C78(u8 metatileBehavior)
+bool8 MetatileBehavior_IsMB_61(u8 metatileBehavior)
 {
   if(metatileBehavior == MB_61)
     return TRUE;
@@ -181,7 +172,7 @@ bool8 sub_8059C78(u8 metatileBehavior)
     return FALSE;
 }
 
-bool8 sub_8059C8C(u8 metatileBehavior)
+bool8 MetatileBehavior_IsMB_60(u8 metatileBehavior)
 {
   if(metatileBehavior == MB_60)
     return TRUE;
@@ -199,7 +190,7 @@ bool8 MetatileBehavior_IsSurfable(u8 metatileBehavior)
     return FALSE;
 }
 
-bool8 sub_8059CC8(u8 metatileBehavior)
+bool8 MetatileBehavior_IsSemiDeepWater(u8 metatileBehavior)
 {
   if(metatileBehavior == MB_SEMI_DEEP_WATER)
     return TRUE;
@@ -258,7 +249,7 @@ bool8 MetatileBehavior_IsForcedMovementTile(u8 metatileBehavior)
     ||(metatileBehavior >= MB_EASTWARD_CURRENT && metatileBehavior <= MB_SOUTHWARD_CURRENT)
     || metatileBehavior == MB_WATERFALL
     || metatileBehavior == MB_ICE
-    || (metatileBehavior >= MB_UNKNOWN_MOVEMENT_54 && metatileBehavior <= MB_UNKNOWN_MOVEMENT_57))
+    || (metatileBehavior >= MB_SPIN_RIGHT && metatileBehavior <= MB_SPIN_DOWN))
       return TRUE;
   else
     return FALSE;
@@ -418,9 +409,9 @@ bool8 MetatileBehavior_IsPuddle(u8 metatileBehavior)
     return FALSE;
 }
 
-bool8 sub_8059F34(u8 metatileBehavior)
+bool8 MetatileBehavior_IsTallGrass_2(u8 metatileBehavior)
 {
-  if(metatileBehavior == MB_TALL_GRASS || metatileBehavior == MB_BUMPY_SLOPE)
+  if(metatileBehavior == MB_TALL_GRASS || metatileBehavior == MB_CYCLING_ROAD_PULL_DOWN_GRASS)
     return TRUE;
   else
     return FALSE;
@@ -432,7 +423,7 @@ bool8 MetatileBehavior_ReturnFalse_4(u8 metatileBehavior) { return FALSE; }
 bool8 MetatileBehavior_ReturnFalse_5(u8 metatileBehavior) { return FALSE; }
 bool8 MetatileBehavior_ReturnFalse_6(u8 metatileBehavior) { return FALSE; }
 
-bool8 sub_8059F60(u8 metatileBehavior)
+bool8 MetatileBehavior_UnusedIsMB_01(u8 metatileBehavior)
 {
   if(metatileBehavior == MB_01)
     return TRUE;
@@ -654,17 +645,17 @@ bool8 sub_805A1C4(u8 metatileBehavior)
 
 bool8 MetatileBehavior_ReturnFalse_12(u8 metatileBehavior){ return FALSE; }
 
-bool8 MetatileBehavior_IsMuddyOrBumpySlope(u8 metatileBehavior)
+bool8 MetatileBehavior_IsCyclingRoadPullDownTile(u8 metatileBehavior)
 {
-  if(metatileBehavior >= MB_MUDDY_SLOPE && metatileBehavior <= MB_BUMPY_SLOPE)
+  if(metatileBehavior >= MB_CYCLING_ROAD_PULL_DOWN && metatileBehavior <= MB_CYCLING_ROAD_PULL_DOWN_GRASS)
     return TRUE;
   else
     return FALSE;
 }
 
-bool8 MetatileBehavior_UnusedIsBumpySlope(u8 metatileBehavior)
+bool8 MetatileBehavior_IsCyclingRoadPullDownTileGrass(u8 metatileBehavior)
 {
-  return metatileBehavior == MB_BUMPY_SLOPE;
+  return metatileBehavior == MB_CYCLING_ROAD_PULL_DOWN_GRASS;
 }
 
 bool8 MetatileBehavior_ReturnFalse_13(u8 metatileBehavior) { return FALSE; }
@@ -693,7 +684,7 @@ bool8 MetatileBehavior_UnusedReturnFalse_9(u8 metatileBehavior) { return FALSE; 
 
 bool8 MetatileBehavior_IsMB_81(u8 metatileBehavior)
 {
-  if(metatileBehavior == MB_81)
+  if(metatileBehavior == MB_SHELF)
     return TRUE;
   else
     return FALSE;
@@ -701,7 +692,7 @@ bool8 MetatileBehavior_IsMB_81(u8 metatileBehavior)
 
 bool8 MetatileBehavior_IsMB_82(u8 metatileBehavior)
 {
-  if(metatileBehavior == MB_82)
+  if(metatileBehavior == MB_POKEMART_SHELF)
     return TRUE;
   else
     return FALSE;
@@ -732,8 +723,6 @@ bool8 MetatileBehavior_UnusedReturnFalse_11(u8 metatileBehavior) { return FALSE;
 bool8 MetatileBehavior_UnusedReturnFalse_12(u8 metatileBehavior) { return FALSE; }
 bool8 MetatileBehavior_UnusedReturnFalse_13(u8 metatileBehavior) { return FALSE; }
 
-extern u8 gUnknown_8353068[];
-
 // TODO: Confirm argument names
 bool8 sub_805A2BC(u8 metatileBehavior, u8 playerDirection)
 {
@@ -743,51 +732,51 @@ bool8 sub_805A2BC(u8 metatileBehavior, u8 playerDirection)
     return FALSE;
 }
 
-bool8 MetatileBehavior_UnusedIsUnknownMovement54(u8 metatileBehavior)
+bool8 MetatileBehavior_UnusedIsSpinRight(u8 metatileBehavior)
 {
-  if(metatileBehavior == MB_UNKNOWN_MOVEMENT_54)
+  if(metatileBehavior == MB_SPIN_RIGHT)
     return TRUE;
   else
     return FALSE;
 }
 
-bool8 MetatileBehavior_UnusedIsUnknownMovement55(u8 metatileBehavior)
+bool8 MetatileBehavior_UnusedIsSpinLeft(u8 metatileBehavior)
 {
-  if(metatileBehavior == MB_UNKNOWN_MOVEMENT_55)
+  if(metatileBehavior == MB_SPIN_LEFT)
     return TRUE;
   else
     return FALSE;
 }
 
-bool8 MetatileBehavior_UnusedIsUnknownMovement56(u8 metatileBehavior)
+bool8 MetatileBehavior_UnusedIsSpinUp(u8 metatileBehavior)
 {
-  if(metatileBehavior == MB_UNKNOWN_MOVEMENT_56)
+  if(metatileBehavior == MB_SPIN_UP)
     return TRUE;
   else
     return FALSE;
 }
 
-bool8 MetatileBehavior_UnusedIsUnknownMovement57(u8 metatileBehavior)
+bool8 MetatileBehavior_UnusedIsSpinDown(u8 metatileBehavior)
 {
-  if(metatileBehavior == MB_UNKNOWN_MOVEMENT_57)
+  if(metatileBehavior == MB_SPIN_DOWN)
     return TRUE;
   else
     return FALSE;
 }
 
-bool8 MetatileBehavior_IsMB_58(u8 metatileBehavior)
+bool8 MetatileBehavior_IsStopSpinning(u8 metatileBehavior)
 {
-  if(metatileBehavior == MB_58)
+  if(metatileBehavior == MB_STOP_SPINNING)
     return TRUE;
   else
     return FALSE;
 }
 
-bool8 MetatileBehavior_IsUnknownMovmeent54to57(u8 metatileBehavior)
+bool8 MetatileBehavior_IsSpinTile(u8 metatileBehavior)
 {
   bool8 result = FALSE;
 
-  if(metatileBehavior >= MB_UNKNOWN_MOVEMENT_54 && metatileBehavior <= MB_UNKNOWN_MOVEMENT_57)
+  if(metatileBehavior >= MB_SPIN_RIGHT && metatileBehavior <= MB_SPIN_DOWN)
     result = TRUE;
   else
     result = FALSE;
@@ -797,7 +786,7 @@ bool8 MetatileBehavior_IsUnknownMovmeent54to57(u8 metatileBehavior)
 
 bool8 MetatileBehavior_IsMB_84(u8 metatileBehavior)
 {
-  if(metatileBehavior == MB_84)
+  if(metatileBehavior == MB_DPAD_SIGNPOST_ACTIVE)
     return TRUE;
   else
     return FALSE;
@@ -805,7 +794,7 @@ bool8 MetatileBehavior_IsMB_84(u8 metatileBehavior)
 
 bool8 MetatileBehavior_IsMB_89(u8 metatileBehavior)
 {
-  if(metatileBehavior == MB_89)
+  if(metatileBehavior == MB_CABINET)
     return TRUE;
   else
     return FALSE;
@@ -813,7 +802,7 @@ bool8 MetatileBehavior_IsMB_89(u8 metatileBehavior)
 
 bool8 MetatileBehavior_IsMB_8A(u8 metatileBehavior)
 {
-  if(metatileBehavior == MB_8A)
+  if(metatileBehavior == MB_KITCHEN)
     return TRUE;
   else
     return FALSE;
@@ -821,7 +810,7 @@ bool8 MetatileBehavior_IsMB_8A(u8 metatileBehavior)
 
 bool8 MetatileBehavior_IsMB_8B(u8 metatileBehavior)
 {
-  if(metatileBehavior == MB_8B)
+  if(metatileBehavior == MB_DRESSER)
     return TRUE;
   else
     return FALSE;
@@ -829,7 +818,7 @@ bool8 MetatileBehavior_IsMB_8B(u8 metatileBehavior)
 
 bool8 MetatileBehavior_IsMB_8C(u8 metatileBehavior)
 {
-  if(metatileBehavior == MB_8C)
+  if(metatileBehavior == MB_SNACKS)
     return TRUE;
   else
     return FALSE;
@@ -847,7 +836,7 @@ bool8 MetatileBehavior_IsPlayerFacingMB_8D(u8 tile, u8 playerDirection)
 {
   if(playerDirection != DIR_NORTH)
     return FALSE;
-  else if(tile == MB_8D)
+  else if(tile == MB_ADJUSTMENTS)
     return TRUE;
   else
     return FALSE;
@@ -857,7 +846,7 @@ bool8 MetatileBehavior_IsPlayerFacingMB_8E(u8 tile, u8 playerDirection)
 {
   if(playerDirection != DIR_NORTH)
     return FALSE;
-  else if(tile == MB_8E)
+  else if(tile == MB_BATTLE_RECORDS)
     return TRUE;
   else
     return FALSE;
@@ -865,7 +854,7 @@ bool8 MetatileBehavior_IsPlayerFacingMB_8E(u8 tile, u8 playerDirection)
 
 bool8 MetatileBehavior_IsMB_8F(u8 metatileBehavior)
 {
-  if(metatileBehavior == MB_8F)
+  if(metatileBehavior == MB_QUESTIONNAIRE)
     return TRUE;
   else
     return FALSE;
@@ -873,7 +862,7 @@ bool8 MetatileBehavior_IsMB_8F(u8 metatileBehavior)
 
 bool8 MetatileBehavior_IsMB_91(u8 metatileBehavior)
 {
-  if(metatileBehavior == MB_91)
+  if(metatileBehavior == MB_INDIGO_PLATEAU_MARK_DPAD)
     return TRUE;
   else
     return FALSE;
@@ -881,7 +870,7 @@ bool8 MetatileBehavior_IsMB_91(u8 metatileBehavior)
 
 bool8 MetatileBehavior_IsMB_92(u8 metatileBehavior)
 {
-  if(metatileBehavior == MB_92)
+  if(metatileBehavior == MB_INDIGO_PLATEAU_MARK_2_DPAD)
     return TRUE;
   else
     return FALSE;
@@ -889,7 +878,7 @@ bool8 MetatileBehavior_IsMB_92(u8 metatileBehavior)
 
 bool8 MetatileBehavior_IsMB_90(u8 metatileBehavior)
 {
-  if(metatileBehavior == MB_90)
+  if(metatileBehavior == MB_FOOD)
     return TRUE;
   else
     return FALSE;
@@ -909,7 +898,7 @@ bool8 MetatileBehavior_IsMB_2A(u8 metatileBehavior)
 
 bool8 MetatileBehavior_IsMB_93(u8 metatileBehavior)
 {
-  if(metatileBehavior == MB_93)
+  if(metatileBehavior == MB_BLUEPRINTS)
     return TRUE;
   else
     return FALSE;
@@ -917,7 +906,7 @@ bool8 MetatileBehavior_IsMB_93(u8 metatileBehavior)
 
 bool8 MetatileBehavior_IsMB_94(u8 metatileBehavior)
 {
-  if(metatileBehavior == MB_94)
+  if(metatileBehavior == MB_PAINTING)
     return TRUE;
   else
     return FALSE;
@@ -925,7 +914,7 @@ bool8 MetatileBehavior_IsMB_94(u8 metatileBehavior)
 
 bool8 MetatileBehavior_IsMB_95(u8 metatileBehavior)
 {
-  if(metatileBehavior == MB_95)
+  if(metatileBehavior == MB_POWER_PLANT_MACHINE)
     return TRUE;
   else
     return FALSE;
@@ -933,7 +922,7 @@ bool8 MetatileBehavior_IsMB_95(u8 metatileBehavior)
 
 bool8 MetatileBehavior_IsMB_96(u8 metatileBehavior)
 {
-  if(metatileBehavior == MB_96)
+  if(metatileBehavior == MB_TELEPHONE)
     return TRUE;
   else
     return FALSE;
@@ -941,7 +930,7 @@ bool8 MetatileBehavior_IsMB_96(u8 metatileBehavior)
 
 bool8 MetatileBehavior_IsMB_97(u8 metatileBehavior)
 {
-  if(metatileBehavior == MB_97)
+  if(metatileBehavior == MB_COMPLICATED_PAPERS)
     return TRUE;
   else
     return FALSE;
@@ -949,7 +938,7 @@ bool8 MetatileBehavior_IsMB_97(u8 metatileBehavior)
 
 bool8 MetatileBehavior_IsMB_98(u8 metatileBehavior)
 {
-  if(metatileBehavior == MB_98)
+  if(metatileBehavior == MB_ADVERTISING_POSTER)
     return TRUE;
   else
     return FALSE;
@@ -957,7 +946,7 @@ bool8 MetatileBehavior_IsMB_98(u8 metatileBehavior)
 
 bool8 MetatileBehavior_IsMB_99(u8 metatileBehavior)
 {
-  if(metatileBehavior == MB_99)
+  if(metatileBehavior == MB_FOOD_SMELLS_TASTY)
     return TRUE;
   else
     return FALSE;
@@ -965,7 +954,7 @@ bool8 MetatileBehavior_IsMB_99(u8 metatileBehavior)
 
 bool8 MetatileBehavior_IsMB_9A(u8 metatileBehavior)
 {
-  if(metatileBehavior == MB_9A)
+  if(metatileBehavior == MB_TRASH_BIN)
     return TRUE;
   else
     return FALSE;
@@ -973,7 +962,7 @@ bool8 MetatileBehavior_IsMB_9A(u8 metatileBehavior)
 
 bool8 MetatileBehavior_IsMB_9B(u8 metatileBehavior)
 {
-  if(metatileBehavior == MB_9B)
+  if(metatileBehavior == MB_CAPTAIN_CUP)
     return TRUE;
   else
     return FALSE;
@@ -984,7 +973,7 @@ bool8 MetatileBehavior_ReturnFalse_19(u8 metatileBehavior) { return FALSE; }
 
 bool8 MetatileBehavior_IsMB_9E(u8 metatileBehavior)
 {
-  if(metatileBehavior == MB_9E)
+  if(metatileBehavior == MB_LIGHTS)
     return TRUE;
   else
     return FALSE;
@@ -1000,7 +989,7 @@ bool8 MetatileBehavior_IsMB_9F(u8 metatileBehavior)
 
 bool8 MetatileBehavior_IsMB_A0(u8 metatileBehavior)
 {
-  if(metatileBehavior == MB_A0)
+  if(metatileBehavior == MB_IMPRESSIVE_MACHINE)
     return TRUE;
   else
     return FALSE;
@@ -1008,7 +997,7 @@ bool8 MetatileBehavior_IsMB_A0(u8 metatileBehavior)
 
 bool8 MetatileBehavior_IsMB_A1(u8 metatileBehavior)
 {
-  if(metatileBehavior == MB_A1)
+  if(metatileBehavior == MB_VIDEO_GAME)
     return TRUE;
   else
     return FALSE;
@@ -1016,7 +1005,7 @@ bool8 MetatileBehavior_IsMB_A1(u8 metatileBehavior)
 
 bool8 MetatileBehavior_IsMB_A2(u8 metatileBehavior)
 {
-  if(metatileBehavior == MB_A2)
+  if(metatileBehavior == MB_BURGLARY)
     return TRUE;
   else
     return FALSE;

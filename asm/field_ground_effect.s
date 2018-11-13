@@ -186,7 +186,7 @@ GetGroundEffectFlags_TallGrassOnSpawn: @ 8067CA8
 	push {r4,lr}
 	adds r4, r1, 0
 	ldrb r0, [r0, 0x1E]
-	bl sub_8059F34
+	bl MetatileBehavior_IsTallGrass_2
 	lsls r0, 24
 	cmp r0, 0
 	beq _08067CC0
@@ -205,7 +205,7 @@ GetGroundEffectFlags_TallGrassOnBeginStep: @ 8067CC8
 	push {r4,lr}
 	adds r4, r1, 0
 	ldrb r0, [r0, 0x1E]
-	bl sub_8059F34
+	bl MetatileBehavior_IsTallGrass_2
 	lsls r0, 24
 	cmp r0, 0
 	beq _08067CE0

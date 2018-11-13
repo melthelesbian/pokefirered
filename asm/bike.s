@@ -87,7 +87,7 @@ sub_80BD100: @ 80BD100
 	mov r0, r8
 	strb r0, [r5, 0xA]
 	ldrb r0, [r4, 0x1E]
-	bl MetatileBehavior_IsMuddyOrBumpySlope
+	bl MetatileBehavior_IsCyclingRoadPullDownTile
 	cmp r0, 0x1
 	bne _080BD176
 	ldr r0, _080BD164 @ =gMain
@@ -207,7 +207,7 @@ sub_80BD1E8: @ 80BD1E8
 	ldr r1, _080BD244 @ =gMapObjects
 	adds r0, r1
 	ldrb r0, [r0, 0x1E]
-	bl MetatileBehavior_IsMuddyOrBumpySlope
+	bl MetatileBehavior_IsCyclingRoadPullDownTile
 	adds r2, r0, 0
 	cmp r2, 0x1
 	bne _080BD25A

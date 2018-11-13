@@ -714,7 +714,7 @@ _080DB2AE:
 	cmp r0, r1
 	bne _080DB32C
 	ldrb r0, [r4, 0x1E]
-	bl sub_8059B44
+	bl MetatileBehavior_IsTallGrass
 	lsls r0, 24
 	cmp r0, 0
 	bne _080DB32C
@@ -900,7 +900,7 @@ _080DB438:
 	cmp r0, 0
 	bne _080DB48C
 	adds r0, r6, 0
-	bl sub_8059F34
+	bl MetatileBehavior_IsTallGrass_2
 	lsls r0, 24
 	cmp r0, 0
 	beq _080DB48C

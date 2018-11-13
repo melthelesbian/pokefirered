@@ -1610,7 +1610,7 @@ sub_806D548: @ 806D548
 	lsls r1, 24
 	lsrs r4, r1, 24
 	adds r0, r4, 0
-	bl sub_8059CC8
+	bl MetatileBehavior_IsSemiDeepWater
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -2273,7 +2273,7 @@ sub_806DA10: @ 806DA10
 	lsls r0, r5, 24
 	lsrs r4, r0, 24
 	adds r0, r4, 0
-	bl sub_8059BF0
+	bl MetatileBehavior_IsEscalator
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -2362,19 +2362,19 @@ sub_806DAF4: @ 806DAF4
 	cmp r0, 0x1
 	beq _0806DB7C
 	adds r0, r4, 0
-	bl sub_8059C78
+	bl MetatileBehavior_IsMB_61
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
 	beq _0806DB7C
 	adds r0, r4, 0
-	bl sub_8059BF0
+	bl MetatileBehavior_IsEscalator
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
 	beq _0806DB7C
 	adds r0, r4, 0
-	bl sub_8059C8C
+	bl MetatileBehavior_IsMB_60
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -2435,23 +2435,23 @@ _0806DB98:
 	lsls r0, 24
 	lsrs r4, r0, 24
 	adds r0, r4, 0
-	bl sub_8059C20
+	bl MetatileBehavior_IsUnknownWarp6D
 	lsls r0, 24
 	cmp r0, 0
 	bne _0806DBCC
 	adds r0, r4, 0
-	bl sub_8059C48
+	bl MetatileBehavior_IsUnknownWarp6F
 	b _0806DBC6
 _0806DBB0:
 	lsls r0, 24
 	lsrs r4, r0, 24
 	adds r0, r4, 0
-	bl sub_8059C0C
+	bl MetatileBehavior_IsUnknownWarp6C
 	lsls r0, 24
 	cmp r0, 0
 	bne _0806DBCC
 	adds r0, r4, 0
-	bl sub_8059C34
+	bl MetatileBehavior_IsUnknownWarp6E
 _0806DBC6:
 	lsls r0, 24
 	cmp r0, 0
