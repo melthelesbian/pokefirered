@@ -47,7 +47,7 @@ bool8 MetatileBehavior_IsTallGrass(u8 metatileBehavior)
     return FALSE;
 }
 
-bool8 sub_8059B5C(u8 metatileBehavior)
+bool8 MetatileBehavior_IsMB21OrSand(u8 metatileBehavior)
 {
   if(metatileBehavior == MB_21 || metatileBehavior == MB_SAND)
     return TRUE;
@@ -55,7 +55,7 @@ bool8 sub_8059B5C(u8 metatileBehavior)
     return FALSE;
 }
 
-bool8 sub_8059B74(u8 metatileBehavior)
+bool8 MetatileBehavior_IsMB21OrWaterfallBottom(u8 metatileBehavior)
 {
   if(metatileBehavior == MB_21 || metatileBehavior == MB_WATERFALL_BOTTOM)
     return TRUE;
@@ -436,7 +436,7 @@ bool8 MetatileBehavior_UnusedIsTallGrass(u8 metatileBehavior)
     return FALSE;
 }
 
-bool8 MetatileBehavior_IsMB_0B(u8 metatileBehavior)
+bool8 MetatileBehavior_IsMB0B(u8 metatileBehavior)
 {
   if(metatileBehavior == MB_0B)
     return TRUE;
@@ -444,7 +444,7 @@ bool8 MetatileBehavior_IsMB_0B(u8 metatileBehavior)
     return FALSE;
 }
 
-bool8 MetatileBehavior_IsMB_0C(u8 metatileBehavior)
+bool8 MetatileBehavior_IsMB0C(u8 metatileBehavior)
 {
   if(metatileBehavior == MB_0C)
     return TRUE;
@@ -460,7 +460,7 @@ bool8 MetatileBehavior_IsDeepOrSemiDeepWater(u8 metatileBehavior)
     return FALSE;
 }
 
-bool8 MetatileBehavior_IsMB_19(u8 metatileBehavior)
+bool8 MetatileBehavior_IsMB19(u8 metatileBehavior)
 {
   if(metatileBehavior == MB_19)
     return TRUE;
@@ -501,7 +501,7 @@ bool8 MetatileBehavior_IsDeepSemiDeepOrSplashingWater(u8 metatileBehavior)
     return FALSE;
 }
 
-bool8 MetatileBehavior_IsMB_1A(u8 metatileBehavior)
+bool8 MetatileBehavior_IsMB1A(u8 metatileBehavior)
 {
   if(metatileBehavior == MB_1A)
     return TRUE;
@@ -661,7 +661,7 @@ bool8 MetatileBehavior_ReturnFalse_16(u8 metatileBehavior) { return FALSE; }
 bool8 MetatileBehavior_ReturnFalse_17(u8 metatileBehavior) { return FALSE; }
 bool8 MetatileBehavior_ReturnFalse_18(u8 metatileBehavior) { return FALSE; }
 
-bool8 MetatileBehavior_IsMB_22(u8 metatileBehavior)
+bool8 MetatileBehavior_IsMB22(u8 metatileBehavior)
 {
   if(metatileBehavior == MB_22)
     return TRUE;
@@ -669,7 +669,7 @@ bool8 MetatileBehavior_IsMB_22(u8 metatileBehavior)
     return FALSE;
 }
 
-bool8 MetatileBehavior_IsMB_0A(u8 metatileBehavior)
+bool8 MetatileBehavior_IsMB0A(u8 metatileBehavior)
 {
   if(metatileBehavior == MB_0A)
     return TRUE;
@@ -976,7 +976,7 @@ bool8 MetatileBehavior_IsBlinkingLights(u8 metatileBehavior)
     return FALSE;
 }
 
-bool8 MetatileBehavior_IsMB_9F(u8 metatileBehavior)
+bool8 MetatileBehavior_IsMB9F(u8 metatileBehavior)
 {
   if(metatileBehavior == MB_9F)
     return TRUE;
@@ -1008,7 +1008,7 @@ bool8 MetatileBehavior_IsBurglary(u8 metatileBehavior)
     return FALSE;
 }
 
-bool8 MetatileBehavior_IsMB_A3(u8 metatileBehavior)
+bool8 MetatileBehavior_IsMBA3(u8 metatileBehavior)
 {
   if(metatileBehavior == MB_A3)
     return TRUE;

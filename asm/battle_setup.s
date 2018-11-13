@@ -779,7 +779,7 @@ _0807FC92:
 	b _0807FD88
 _0807FCA2:
 	adds r0, r4, 0
-	bl sub_8059B74
+	bl MetatileBehavior_IsMB21OrWaterfallBottom
 	lsls r0, 24
 	cmp r0, 0
 	beq _0807FCB2
@@ -814,7 +814,7 @@ _0807FCF4:
 	lsls r0, r5, 24
 	lsrs r4, r0, 24
 	adds r0, r4, 0
-	bl MetatileBehavior_IsMB_0B
+	bl MetatileBehavior_IsMB0B
 	lsls r0, 24
 	cmp r0, 0
 	beq _0807FD08
@@ -854,7 +854,7 @@ _0807FD2C:
 	cmp r0, 0
 	bne _0807FD70
 	adds r0, r4, 0
-	bl MetatileBehavior_IsMB_0C
+	bl MetatileBehavior_IsMB0C
 	lsls r0, 24
 	cmp r0, 0
 	beq _0807FD58

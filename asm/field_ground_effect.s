@@ -273,7 +273,7 @@ GetGroundEffectFlags_Tracks: @ 8067D28
 	b _08067D5E
 _08067D42:
 	ldrb r0, [r4, 0x1F]
-	bl sub_8059B5C
+	bl MetatileBehavior_IsMB21OrSand
 	lsls r0, 24
 	cmp r0, 0
 	bne _08067D5A
@@ -528,7 +528,7 @@ GetGroundEffectFlags_Seaweed: @ 8067F0C
 	push {r4,lr}
 	adds r4, r1, 0
 	ldrb r0, [r0, 0x1E]
-	bl MetatileBehavior_IsMB_22
+	bl MetatileBehavior_IsMB22
 	lsls r0, 24
 	cmp r0, 0
 	beq _08067F26

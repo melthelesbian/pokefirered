@@ -1325,7 +1325,7 @@ _0806D2D8:
 _0806D2EC: .4byte gUnknown_81A762A
 _0806D2F0:
 	adds r0, r4, 0
-	bl MetatileBehavior_IsMB_A3
+	bl MetatileBehavior_IsMBA3
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -1502,7 +1502,7 @@ _0806D458:
 _0806D46C: .4byte gUnknown_81A76CC
 _0806D470:
 	adds r0, r4, 0
-	bl MetatileBehavior_IsMB_9F
+	bl MetatileBehavior_IsMB9F
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -2952,7 +2952,7 @@ dive_warp: @ 806DF3C
 	bne _0806DF74
 	lsls r0, r5, 24
 	lsrs r0, 24
-	bl MetatileBehavior_IsMB_19
+	bl MetatileBehavior_IsMB19
 	lsls r0, 24
 	cmp r0, 0
 	bne _0806DF74
@@ -3025,7 +3025,7 @@ sub_806DFB8: @ 806DFB8
 	cmp r0, 0x5
 	bne _0806E014
 	adds r0, r5, 0
-	bl MetatileBehavior_IsMB_19
+	bl MetatileBehavior_IsMB19
 	lsls r0, 24
 	cmp r0, 0
 	bne _0806E014

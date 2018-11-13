@@ -2,12 +2,12 @@
 #define GUARD_METATILE_BEHAVIORS
 
 #define	MB_NORMAL	0x00
-#define MB_01 0x01
+#define	MB_01	0x01
 #define	MB_TALL_GRASS	0x02
 #define	MB_CAVE	0x08
-#define MB_0A 0x0A
-#define MB_0B 0x0B
-#define MB_0C 0x0C
+#define	MB_0A	0x0A
+#define	MB_0B	0x0B
+#define	MB_0C	0x0C
 #define	MB_POND_WATER	0x10
 #define	MB_SEMI_DEEP_WATER	0x11
 #define	MB_DEEP_WATER	0x12
@@ -15,12 +15,12 @@
 #define	MB_SPLASHING_WATER	0x15
 #define	MB_PUDDLE	0x16
 #define	MB_WATERFALL_BOTTOM	0x17
-#define MB_19 0x19
-#define MB_1A 0x1A
-#define MB_1B 0x1B
+#define	MB_19	0x19
+#define	MB_1A	0x1A
+#define	MB_1B	0x1B
 #define	MB_STRENGTH_BUTTON	0x20
-#define MB_21 0x21
-#define MB_22 0x22
+#define	MB_21	0x21
+#define	MB_22	0x22
 #define	MB_ICE	0x23
 #define	MB_THIN_ICE	0x26
 #define	MB_CRACKED_ICE	0x27
@@ -67,7 +67,7 @@
 #define	MB_SOUTH_ARROW_WARP	0x65
 #define	MB_FALL_WARP	0x66
 #define	MB_REGULAR_WARP	0x67
-#define MB_68 0x68
+#define	MB_68	0x68
 #define	MB_WARP_DOOR	0x69
 #define	MB_UP_ESCALATOR	0x6A
 #define	MB_DOWN_ESCALATOR	0x6B
@@ -111,7 +111,7 @@
 #define	MB_VIDEO_GAME	0xA1
 #define	MB_BURGLARY	0xA2
 #define	MB_A3	0xA3
-#define MB_CYCLING_ROAD_PULL_DOWN 0xD0
-#define MB_CYCLING_ROAD_PULL_DOWN_GRASS 0xD1
+#define	MB_CYCLING_ROAD_PULL_DOWN	0xD0
+#define	MB_CYCLING_ROAD_PULL_DOWN_GRASS	0xD1
 
 #endif // GUARD_METATILE_BEHAVIORS

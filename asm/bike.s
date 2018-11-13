@@ -572,7 +572,7 @@ sub_80BD4B8: @ 80BD4B8
 	lsls r0, 24
 	lsrs r4, r0, 24
 	adds r0, r4, 0
-	bl MetatileBehavior_IsMB_0A
+	bl MetatileBehavior_IsMB0A
 	lsls r0, 24
 	cmp r0, 0
 	bne _080BD4E2
