@@ -213,7 +213,7 @@ sub_805B528: @ 805B528
 	cmp r0, 0
 	beq _0805B598
 	ldrb r0, [r5, 0x1C]
-	bl sub_805A344
+	bl MetatileBehavior_IsUnknownMovmeent54to57
 	lsls r0, 24
 	cmp r0, 0
 	beq _0805B598
@@ -230,13 +230,13 @@ sub_805B528: @ 805B528
 	cmp r0, 0
 	beq _0805B586
 	ldrb r0, [r1, 0x1E]
-	bl sub_805A330
+	bl MetatileBehavior_IsMB_58
 	lsls r0, 24
 	cmp r0, 0
 	bne _0805B598
 	ldr r0, [r4]
 	ldrb r0, [r0, 0x1E]
-	bl sub_805A344
+	bl MetatileBehavior_IsUnknownMovmeent54to57
 	lsls r0, 24
 	cmp r0, 0
 	beq _0805B57A
@@ -1015,7 +1015,7 @@ _0805BB00:
 	bl sub_8058F78
 	lsls r0, 24
 	lsrs r0, 24
-	bl sub_805A460
+	bl MetatileBehavior_IsMB_2A
 	lsls r0, 24
 	lsrs r0, 24
 	b _0805BB14

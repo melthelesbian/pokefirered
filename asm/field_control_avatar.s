@@ -1259,7 +1259,7 @@ _0806D248:
 _0806D25C: .4byte gUnknown_81A760F
 _0806D260:
 	adds r0, r4, 0
-	bl sub_805A44C
+	bl MetatileBehavior_IsMB_90
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -1270,7 +1270,7 @@ _0806D260:
 _0806D274: .4byte gUnknown_81A7618
 _0806D278:
 	adds r0, r4, 0
-	bl sub_805A558
+	bl MetatileBehavior_IsMB_A0
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -1281,7 +1281,7 @@ _0806D278:
 _0806D28C: .4byte gUnknown_81A7633
 _0806D290:
 	adds r0, r4, 0
-	bl sub_805A474
+	bl MetatileBehavior_IsMB_93
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -1292,7 +1292,7 @@ _0806D290:
 _0806D2A4: .4byte gUnknown_81A763C
 _0806D2A8:
 	adds r0, r4, 0
-	bl sub_805A56C
+	bl MetatileBehavior_IsMB_A1
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -1303,7 +1303,7 @@ _0806D2A8:
 _0806D2BC: .4byte gUnknown_81A7621
 _0806D2C0:
 	adds r0, r4, 0
-	bl sub_805A580
+	bl MetatileBehavior_IsMB_A2
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -1314,7 +1314,7 @@ _0806D2C0:
 _0806D2D4: .4byte gUnknown_81A7645
 _0806D2D8:
 	adds r0, r4, 0
-	bl sub_805A4C4
+	bl MetatileBehavior_IsMB_97
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -1325,7 +1325,7 @@ _0806D2D8:
 _0806D2EC: .4byte gUnknown_81A762A
 _0806D2F0:
 	adds r0, r4, 0
-	bl sub_805A594
+	bl MetatileBehavior_IsMB_A3
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -1348,7 +1348,7 @@ _0806D308:
 _0806D31C: .4byte gUnknown_81A764E
 _0806D320:
 	adds r0, r4, 0
-	bl sub_805A374
+	bl MetatileBehavior_IsMB_89
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -1359,7 +1359,7 @@ _0806D320:
 _0806D334: .4byte gUnknown_81A7657
 _0806D338:
 	adds r0, r4, 0
-	bl sub_805A388
+	bl MetatileBehavior_IsMB_8A
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -1370,7 +1370,7 @@ _0806D338:
 _0806D34C: .4byte gUnknown_81A7660
 _0806D350:
 	adds r0, r4, 0
-	bl sub_805A39C
+	bl MetatileBehavior_IsMB_8B
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -1381,7 +1381,7 @@ _0806D350:
 _0806D364: .4byte gUnknown_81A7669
 _0806D368:
 	adds r0, r4, 0
-	bl sub_805A3B0
+	bl MetatileBehavior_IsMB_8C
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -1392,7 +1392,7 @@ _0806D368:
 _0806D37C: .4byte gUnknown_81A7672
 _0806D380:
 	adds r0, r4, 0
-	bl sub_805A488
+	bl MetatileBehavior_IsMB_94
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -1403,7 +1403,7 @@ _0806D380:
 _0806D394: .4byte gUnknown_81A767B
 _0806D398:
 	adds r0, r4, 0
-	bl sub_805A49C
+	bl MetatileBehavior_IsMB_95
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -1414,7 +1414,7 @@ _0806D398:
 _0806D3AC: .4byte gUnknown_81A7684
 _0806D3B0:
 	adds r0, r4, 0
-	bl sub_805A4B0
+	bl MetatileBehavior_IsMB_96
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -1425,7 +1425,7 @@ _0806D3B0:
 _0806D3C4: .4byte gUnknown_81A768D
 _0806D3C8:
 	adds r0, r4, 0
-	bl sub_805A4D8
+	bl MetatileBehavior_IsMB_98
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -1436,7 +1436,7 @@ _0806D3C8:
 _0806D3DC: .4byte gUnknown_81A7696
 _0806D3E0:
 	adds r0, r4, 0
-	bl sub_805A4EC
+	bl MetatileBehavior_IsMB_99
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -1447,7 +1447,7 @@ _0806D3E0:
 _0806D3F4: .4byte gUnknown_81A769F
 _0806D3F8:
 	adds r0, r4, 0
-	bl sub_805A500
+	bl MetatileBehavior_IsMB_9A
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -1458,7 +1458,7 @@ _0806D3F8:
 _0806D40C: .4byte gUnknown_81A76A8
 _0806D410:
 	adds r0, r4, 0
-	bl sub_805A514
+	bl MetatileBehavior_IsMB_9B
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -1469,7 +1469,7 @@ _0806D410:
 _0806D424: .4byte gUnknown_81A76B1
 _0806D428:
 	adds r0, r4, 0
-	bl sub_805A528
+	bl MetatileBehavior_ReturnFalse_18
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -1480,7 +1480,7 @@ _0806D428:
 _0806D43C: .4byte gUnknown_81A76BA
 _0806D440:
 	adds r0, r4, 0
-	bl sub_805A52C
+	bl MetatileBehavior_ReturnFalse_19
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -1491,7 +1491,7 @@ _0806D440:
 _0806D454: .4byte gUnknown_81A76C3
 _0806D458:
 	adds r0, r4, 0
-	bl sub_805A530
+	bl MetatileBehavior_IsMB_9E
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -1502,7 +1502,7 @@ _0806D458:
 _0806D46C: .4byte gUnknown_81A76CC
 _0806D470:
 	adds r0, r4, 0
-	bl sub_805A544
+	bl MetatileBehavior_IsMB_9F
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -1514,7 +1514,7 @@ _0806D484: .4byte gUnknown_81A76D5
 _0806D488:
 	adds r0, r4, 0
 	adds r1, r5, 0
-	bl sub_805A3D8
+	bl MetatileBehavior_IsPlayerFacingMB_8D
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -1525,7 +1525,7 @@ _0806D488:
 _0806D49C: .4byte gUnknown_81BBFD8
 _0806D4A0:
 	adds r0, r4, 0
-	bl sub_805A410
+	bl MetatileBehavior_IsMB_8F
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -1537,7 +1537,7 @@ _0806D4B4: .4byte gUnknown_81A7702
 _0806D4B8:
 	adds r0, r4, 0
 	adds r1, r5, 0
-	bl sub_805A3F4
+	bl MetatileBehavior_IsPlayerFacingMB_8E
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -1548,7 +1548,7 @@ _0806D4B8:
 _0806D4CC: .4byte gUnknown_81BB8A7
 _0806D4D0:
 	adds r0, r4, 0
-	bl sub_805A424
+	bl MetatileBehavior_IsMB_91
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -1560,7 +1560,7 @@ _0806D4D0:
 _0806D4E8: .4byte gUnknown_81A76F0
 _0806D4EC:
 	adds r0, r4, 0
-	bl sub_805A438
+	bl MetatileBehavior_IsMB_92
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -2076,7 +2076,7 @@ _0806D8B6:
 	b _0806D902
 _0806D8CA:
 	adds r0, r4, 0
-	bl sub_805A424
+	bl MetatileBehavior_IsMB_91
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -2085,7 +2085,7 @@ _0806D8CA:
 	b _0806D902
 _0806D8DC:
 	adds r0, r4, 0
-	bl sub_805A438
+	bl MetatileBehavior_IsMB_92
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -2094,7 +2094,7 @@ _0806D8DC:
 	b _0806D902
 _0806D8EE:
 	adds r0, r4, 0
-	bl sub_805A360
+	bl MetatileBehavior_IsMB_84
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
