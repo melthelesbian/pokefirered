@@ -13379,7 +13379,7 @@ _08063E5C:
 	cmp r0, 0x1
 	beq _08063E78
 	ldrb r0, [r4, 0x1E]
-	bl sub_8059DC0
+	bl MetatileBehavior_IsUnknownMovement48
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1

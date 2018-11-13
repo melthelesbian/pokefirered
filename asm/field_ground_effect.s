@@ -224,7 +224,7 @@ GetGroundEffectFlags_LongGrassOnSpawn: @ 8067CE8
 	push {r4,lr}
 	adds r4, r1, 0
 	ldrb r0, [r0, 0x1E]
-	bl MetatileBehavior_ReturnFalse_2
+	bl MetatileBehavior_ReturnFalse_3
 	lsls r0, 24
 	cmp r0, 0
 	beq _08067D00
@@ -243,7 +243,7 @@ GetGroundEffectFlags_LongGrassOnBeginStep: @ 8067D08
 	push {r4,lr}
 	adds r4, r1, 0
 	ldrb r0, [r0, 0x1E]
-	bl MetatileBehavior_ReturnFalse_2
+	bl MetatileBehavior_ReturnFalse_3
 	lsls r0, 24
 	cmp r0, 0
 	beq _08067D20
@@ -263,7 +263,7 @@ GetGroundEffectFlags_Tracks: @ 8067D28
 	adds r4, r0, 0
 	adds r5, r1, 0
 	ldrb r0, [r4, 0x1F]
-	bl sub_8059B8C
+	bl MetatileBehavior_ReturnFalse
 	lsls r0, 24
 	cmp r0, 0
 	beq _08067D42
@@ -278,7 +278,7 @@ _08067D42:
 	cmp r0, 0
 	bne _08067D5A
 	ldrb r0, [r4, 0x1F]
-	bl MetatileBehavior_ReturnFalse_4
+	bl MetatileBehavior_ReturnFalse_5
 	lsls r0, 24
 	cmp r0, 0
 	beq _08067D62
@@ -300,12 +300,12 @@ GetGroundEffectFlags_SandHeap: @ 8067D68
 	adds r4, r0, 0
 	adds r5, r1, 0
 	ldrb r0, [r4, 0x1E]
-	bl sub_8059B8C
+	bl MetatileBehavior_ReturnFalse
 	lsls r0, 24
 	cmp r0, 0
 	beq _08067DA6
 	ldrb r0, [r4, 0x1F]
-	bl sub_8059B8C
+	bl MetatileBehavior_ReturnFalse
 	lsls r0, 24
 	cmp r0, 0
 	beq _08067DA6
@@ -343,23 +343,23 @@ GetGroundEffectFlags_ShallowFlowingWater: @ 8067DB8
 	adds r4, r0, 0
 	adds r5, r1, 0
 	ldrb r0, [r4, 0x1E]
-	bl sub_8059FE0
+	bl MetatileBehavior_IsWaterfallBottom
 	lsls r0, 24
 	cmp r0, 0
 	beq _08067DD6
 	ldrb r0, [r4, 0x1F]
-	bl sub_8059FE0
+	bl MetatileBehavior_IsWaterfallBottom
 	lsls r0, 24
 	cmp r0, 0
 	bne _08067DEE
 _08067DD6:
 	ldrb r0, [r4, 0x1E]
-	bl MetatileBehavior_ReturnFalse_9
+	bl MetatileBehavior_ReturnFalse_10
 	lsls r0, 24
 	cmp r0, 0
 	beq _08067E0C
 	ldrb r0, [r4, 0x1F]
-	bl MetatileBehavior_ReturnFalse_9
+	bl MetatileBehavior_ReturnFalse_10
 	lsls r0, 24
 	cmp r0, 0
 	beq _08067E0C
@@ -443,12 +443,12 @@ GetGroundEffectFlags_ShortGrass: @ 8067E6C
 	adds r4, r0, 0
 	adds r5, r1, 0
 	ldrb r0, [r4, 0x1E]
-	bl MetatileBehavior_ReturnFalse_7
+	bl MetatileBehavior_ReturnFalse_8
 	lsls r0, 24
 	cmp r0, 0
 	beq _08067EAA
 	ldrb r0, [r4, 0x1F]
-	bl MetatileBehavior_ReturnFalse_7
+	bl MetatileBehavior_ReturnFalse_8
 	lsls r0, 24
 	cmp r0, 0
 	beq _08067EAA
@@ -763,7 +763,7 @@ GetReflectionTypeByMetatileBehavior: @ 80680C8
 	b _080680F0
 _080680DE:
 	adds r0, r4, 0
-	bl sub_8059B90
+	bl MetatileBehavior_IsReflective
 	lsls r0, 24
 	cmp r0, 0
 	bne _080680EE
@@ -838,12 +838,12 @@ FieldObjectSetSpriteOamTableForLongGrass: @ 8068154
 	cmp r0, 0
 	blt _080681A8
 	ldrb r0, [r5, 0x1E]
-	bl MetatileBehavior_ReturnFalse_2
+	bl MetatileBehavior_ReturnFalse_3
 	lsls r0, 24
 	cmp r0, 0
 	beq _080681A8
 	ldrb r0, [r5, 0x1F]
-	bl MetatileBehavior_ReturnFalse_2
+	bl MetatileBehavior_ReturnFalse_3
 	lsls r0, 24
 	cmp r0, 0
 	beq _080681A8

@@ -1015,7 +1015,7 @@ _0805BB00:
 	bl sub_8058F78
 	lsls r0, 24
 	lsrs r0, 24
-	bl MetatileBehavior_IsMB_2A
+	bl MetatileBehavior_IsRockStairs
 	lsls r0, 24
 	lsrs r0, 24
 	b _0805BB14
@@ -1335,7 +1335,7 @@ sub_805BCEC: @ 805BCEC
 	bl sub_8058F78
 	lsls r0, 24
 	lsrs r0, 24
-	bl MetatileBehavior_IsMB_60
+	bl MetatileBehavior_IsCaveDoor
 	lsls r0, 24
 	cmp r0, 0
 	bne _0805BDA0

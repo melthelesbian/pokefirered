@@ -771,7 +771,7 @@ sub_807FC5C: @ 807FC5C
 	b _0807FD88
 _0807FC92:
 	adds r0, r4, 0
-	bl MetatileBehavior_ReturnFalse_2
+	bl MetatileBehavior_ReturnFalse_3
 	lsls r0, 24
 	cmp r0, 0
 	beq _0807FCA2
@@ -844,7 +844,7 @@ _0807FD2C:
 	lsls r0, r5, 24
 	lsrs r4, r0, 24
 	adds r0, r4, 0
-	bl sub_805A01C
+	bl MetatileBehavior_IsDeepSemiDeepOrSplashingWater
 	lsls r0, 24
 	cmp r0, 0
 	bne _0807FD82
@@ -854,7 +854,7 @@ _0807FD2C:
 	cmp r0, 0
 	bne _0807FD70
 	adds r0, r4, 0
-	bl MetatileBehavior_IsMountain
+	bl MetatileBehavior_IsMB_0C
 	lsls r0, 24
 	cmp r0, 0
 	beq _0807FD58
@@ -867,7 +867,7 @@ _0807FD58:
 	cmp r0, 0
 	beq _0807FD86
 	adds r0, r4, 0
-	bl MetatileBehavior_ReturnFalse_6
+	bl MetatileBehavior_ReturnFalse_7
 	lsls r0, 24
 	cmp r0, 0
 	beq _0807FD74
@@ -876,7 +876,7 @@ _0807FD70:
 	b _0807FD88
 _0807FD74:
 	adds r0, r4, 0
-	bl MetatileBehavior_ReturnFalse_5
+	bl MetatileBehavior_ReturnFalse_6
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1

@@ -577,7 +577,7 @@ sub_80BD4B8: @ 80BD4B8
 	cmp r0, 0
 	bne _080BD4E2
 	adds r0, r4, 0
-	bl MetatileBehavior_ReturnFalse_8
+	bl MetatileBehavior_ReturnFalse_9
 	lsls r0, 24
 	cmp r0, 0
 	beq _080BD4E6
@@ -611,21 +611,21 @@ sub_80BD4F0: @ 80BD4F0
 	cmp r0, 0x1
 	bhi _080BD51A
 	adds r0, r4, 0
-	bl MetatileBehavior_ReturnFalse_14
-	lsls r0, 24
-	cmp r0, 0
-	bne _080BD532
-	adds r0, r4, 0
-	bl MetatileBehavior_ReturnFalse_16
-	b _080BD52C
-_080BD51A:
-	adds r0, r5, 0
 	bl MetatileBehavior_ReturnFalse_15
 	lsls r0, 24
 	cmp r0, 0
 	bne _080BD532
-	adds r0, r5, 0
+	adds r0, r4, 0
 	bl MetatileBehavior_ReturnFalse_17
+	b _080BD52C
+_080BD51A:
+	adds r0, r5, 0
+	bl MetatileBehavior_ReturnFalse_16
+	lsls r0, 24
+	cmp r0, 0
+	bne _080BD532
+	adds r0, r5, 0
+	bl MetatileBehavior_ReturnFalse_18
 _080BD52C:
 	lsls r0, 24
 	cmp r0, 0
@@ -697,7 +697,7 @@ player_should_look_direction_be_enforced_upon_movement: @ 80BD58C
 	lsls r0, 2
 	adds r0, r2
 	ldrb r0, [r0, 0x1E]
-	bl MetatileBehavior_ReturnFalse_13
+	bl MetatileBehavior_ReturnFalse_14
 	lsls r0, 24
 	cmp r0, 0
 	beq _080BD5C0
@@ -875,7 +875,7 @@ Bike_HandleBumpySlopeJump: @ 80BD6C4
 	bl sub_8058F78
 	lsls r0, 24
 	lsrs r0, 24
-	bl MetatileBehavior_ReturnFalse_13
+	bl MetatileBehavior_ReturnFalse_14
 	lsls r0, 24
 	cmp r0, 0
 	beq _080BD70C

@@ -500,7 +500,7 @@ _0807DEE8:
 	adds r0, r5, 0
 	bl sub_807DF4C
 	adds r0, r4, 0
-	bl MetatileBehavior_IsMB_60
+	bl MetatileBehavior_IsCaveDoor
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1

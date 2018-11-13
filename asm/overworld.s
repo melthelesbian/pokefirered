@@ -2067,13 +2067,13 @@ _08055B94:
 	lsls r4, 24
 	lsrs r5, r4, 24
 	adds r0, r5, 0
-	bl MetatileBehavior_ReturnFalse
+	bl MetatileBehavior_ReturnFalse_2
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
 	beq _08055BD0
 	adds r0, r5, 0
-	bl MetatileBehavior_IsMB_60
+	bl MetatileBehavior_IsCaveDoor
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
@@ -2158,7 +2158,7 @@ _08055C4C:
 	beq _08055C6C
 _08055C54:
 	lsrs r0, r4, 24
-	bl MetatileBehavior_IsMB_61
+	bl MetatileBehavior_IsLadder
 	lsls r0, 24
 	lsrs r0, 24
 	cmp r0, 0x1
